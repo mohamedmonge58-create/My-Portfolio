@@ -106,6 +106,28 @@ const coffeeAppScreens = [
   '/screens/coffee-app/clear favorites.png',
 ].map(normalize)
 
+const m3lomaScreens = [
+  '/screens/m3loma/splash.png',
+  '/screens/m3loma/home_en.png',
+  '/screens/m3loma/home_ar.png',
+  '/screens/m3loma/discover.png',
+  '/screens/m3loma/search.png',
+  '/screens/m3loma/topics.png',
+  '/screens/m3loma/start course.png',
+  '/screens/m3loma/play course.png',
+  '/screens/m3loma/session.png',
+  '/screens/m3loma/enrolled.png',
+  '/screens/m3loma/favorites.png',
+  '/screens/m3loma/edit_profile.png',
+  '/screens/m3loma/profile.png',
+  '/screens/m3loma/settings.png',
+  '/screens/m3loma/notifications.png',
+  '/screens/m3loma/certificates.png',
+  '/screens/m3loma/help&support.png',
+  '/screens/m3loma/full screen.png',
+  '/screens/m3loma/comp;eted.png',
+].map(normalize)
+
 export const shots: Record<string, string[]> = {
   islamii: [...islamiiScreens],
   islamiiApp: [...islamiiScreens],
@@ -116,7 +138,7 @@ export const shots: Record<string, string[]> = {
   movies: [...moviesAppScreens],
   coffeeApp: [...coffeeAppScreens],
   coffee: [...coffeeAppScreens],
-  m3loma: [],
+  m3loma: [...m3lomaScreens],
   contactApp: [],
   tawseela: [],
   coffeeShop: [...coffeeAppScreens],

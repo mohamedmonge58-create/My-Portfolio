@@ -22,7 +22,7 @@ All text, links and projects live in `src/data.ts`. Items marked `TODO` need you
 - **M3loma**: confirm which features are finished before listing them.
 - **Trekio**: no public repo was found. Set `visible: true` after adding details.
 - Add `live:` URLs to projects when available (Islamii App: add the Google Play link after release).
-- Screenshots are in `public/screens/<project>/` (numbered 1.webp, 2.webp...). Add more files there and list them in `src/screens.ts`. M3loma has none yet.
+- Screenshots are in `public/screens/<project>/` and should also be listed in `src/screens.ts`. M3loma screenshots are stored in `public/screens/m3loma/`.
 
 ## Deploy
 **Vercel:** push to GitHub, then vercel.com > Add New Project > import the repo. Framework: Vite, build `npm run build`, output `dist`. Deploy.

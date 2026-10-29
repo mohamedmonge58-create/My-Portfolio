@@ -107,9 +107,14 @@ export const projects: Project[] = [
   },
   {
     title: 'M3loma',
-    summary: 'Educational platform project currently in development, with a Flutter app and backend work in progress.',
-    features: [],
-    stack: ['Flutter', 'Dart', 'Node.js', 'PostgreSQL', 'Next.js'],
+    summary: 'Flutter learning app with onboarding, course discovery, profile management, and study progress tracking.',
+    features: [
+      'Onboarding and Firebase authentication flows',
+      'Course discovery, search, topics, and detailed lesson previews',
+      'Enrolled courses, favorites, and session tracking for learning progress',
+      'Profile settings, notifications, certificates, and support screens',
+    ],
+    stack: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore', 'Firebase Storage', 'Dio', 'flutter_bloc', 'GoRouter', 'GetIt'],
     status: 'In progress',
     screens: shots.m3loma,
     github: 'https://github.com/mohamedmonge58-create/M3loma-',
@@ -153,8 +158,8 @@ export const projectExperience = [
   },
   {
     title: 'M3loma',
-    text: 'Worked on a learning platform app and backend architecture with Flutter, Node.js, Prisma, PostgreSQL, and JWT-based API patterns.',
-    stack: ['Flutter', 'Dart', 'Node.js', 'PostgreSQL', 'Prisma', 'Express.js'],
+    text: 'Built a Flutter learning app with onboarding, authentication, course discovery, favorites, profile management, and Firebase-backed app flows.',
+    stack: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore', 'Dio', 'flutter_bloc'],
   },
 ]
 
