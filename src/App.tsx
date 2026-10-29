@@ -308,7 +308,7 @@ export default function App() {
                   <span className="btn-icon"><EnvelopeIcon /></span>
                   Contact Me
                 </a>
-                <a className="btn secondary-cta" href="/cv/Mohamed_Monge_Mobile_App_Developer_CV.pdf" download="Mohamed_Monge_Mobile_App_Developer_CV.pdf">
+                <a className="btn secondary-cta" href="/cv/Mohamed_Monge_Mobile_App_Developer.pdf" download="Mohamed_Monge_Mobile_App_Developer.pdf">
                   <span className="btn-icon"><DownloadIcon /></span>
                   Download CV
                 </a>
