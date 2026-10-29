@@ -41,10 +41,16 @@ export type Project = {
   status?: string
   image?: string
   screens?: string[]
+  dashboardScreens?: string[]
   github?: string
   live?: string
   visible: boolean
 }
+
+export const projectCategories = [
+  { title: 'Flutter Projects', items: ['Islami', 'Evently', 'Movies App', 'Coffee App', 'News App'] },
+  { title: 'Full-Stack Projects', items: ['M3loma'] },
+]
 
 export const projects: Project[] = [
   {

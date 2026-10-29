@@ -391,26 +391,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="learning-grid">
-            {projectExperience.map((item) => (
-              <div className="card reveal learning-card" key={item.title}>
-                <span className="badge">Project experience</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <div className="tags">
-                  {item.stack.map((tech) => <span key={`${item.title}-${tech}`}>{tech}</span>)}
-                </div>
-              </div>
-            ))}
-
-            {learning.map((item) => (
-              <div className="card reveal learning-card" key={item.title}>
-                <span className="badge">Learning</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </div>
-            ))}
-          </div>
+          
         </section>
 
         <section id="contact" className="reveal">
@@ -489,8 +470,9 @@ export default function App() {
 
       <footer>
         <div className="cta footer-links">
+
           <a href={profile.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href={profile.x} target="_blank" rel="noopener noreferrer">X</a>
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href={profile.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
         <p>© {new Date().getFullYear()} {profile.name}</p>
