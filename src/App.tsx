@@ -484,7 +484,10 @@ export default function App() {
       <footer>
         <div className="cta footer-links">
 
+         
           <a href={profile.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+         <span>|</span>
+
           <a
   href={profile.linkedin}
   target="_blank"
@@ -498,6 +501,8 @@ export default function App() {
 >
   LinkedIn
 </a>
+<span>|</span>
+
           <a href={profile.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
         <p>© {new Date().getFullYear()} {profile.name}</p>
