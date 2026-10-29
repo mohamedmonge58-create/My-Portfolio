@@ -362,37 +362,50 @@ export default function App() {
           </div>
         </section>
 
-        <section id="learning">
-          <h2 className="title reveal">Experience & learning</h2>
-          <div className="learning-layout">
-            <div className="learning-column">
-              {education.map((item) => (
-                <div className="card reveal learning-card education-card" key={item.title}>
-                  <span className="badge">Education</span>
-                  <h3>{item.title}</h3>
-                  <p className="timeline-meta"><strong>{item.institution}</strong></p>
-                  <p className="timeline-meta">{item.period}</p>
-                  <p>{item.text}</p>
-                </div>
-              ))}
-            </div>
+        
 
-            <div className="learning-column">
-              <div className="card reveal learning-card summary-card">
-                <span className="badge">Summary</span>
-                <h3>Developer profile</h3>
-                <p>{profile.intro}</p>
-                <div className="summary-list">
-                  {profile.about.map((item) => (
-                    <p key={item}>{item}</p>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
 
-          
-        </section>
+<section id="learning">
+  <h2 className="title reveal">Experience & learning</h2>
+
+  <div className="learning-layout">
+    {/* Education Card */}
+    <div className="learning-column">
+      {education.map((item) => (
+        <div
+          className="card reveal learning-card education-card"
+          key={item.title}
+        >
+          <span className="badge">Education</span>
+          <h3>{item.title}</h3>
+          <p className="timeline-meta">
+            <strong>{item.institution}</strong>
+          </p>
+          <p className="timeline-meta">{item.period}</p>
+          <p>{item.text}</p>
+        </div>
+      ))}
+    </div>
+
+    {/* Summary Card */}
+    <div className="learning-column">
+      <div className="card reveal learning-card summary-card">
+        <span className="badge">Summary</span>
+        <h3>Developer profile</h3>
+        <p>{profile.intro}</p>
+
+        <div className="summary-list">
+          {profile.about.map((item) => (
+            <p key={item}>{item}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
         <section id="contact" className="reveal">
           <h2 className="title">Contact</h2>
@@ -472,7 +485,7 @@ export default function App() {
         <div className="cta footer-links">
 
           <a href={profile.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">X</a>
           <a href={profile.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
         <p>© {new Date().getFullYear()} {profile.name}</p>
