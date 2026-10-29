@@ -114,6 +114,26 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes shine{to{background-position:200% center}}
 @media(prefers-reduced-motion:reduce){.hero h1,.avatar::before{animation:none}}
 @media(max-width:720px){.hero{padding-top:56px}.hero-top{flex-direction:column-reverse;gap:36px;align-items:flex-start}.avatar{flex-basis:auto;width:220px;height:220px;align-self:center}.hero-avatar-wrap .avatar{width:200px;height:200px;flex-basis:200px}.hero-content{align-items:center;text-align:center}.hero-actions{justify-content:center}.socials{justify-content:center}}
-.footer-links span {
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 12px;
+}
+
+footer .footer-links a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer .footer-links a:hover {
+  color: var(--text);
+}
+
+footer .footer-links span {
   color: var(--muted);
 }

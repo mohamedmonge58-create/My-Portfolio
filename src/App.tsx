@@ -308,7 +308,7 @@ export default function App() {
                   <span className="btn-icon"><EnvelopeIcon /></span>
                   Contact Me
                 </a>
-                <a className="btn secondary-cta" href="/cv/Mohamed_Monge_Flutter___cv.pdf" download="Mohamed_Monge_Flutter___cv.pdf">
+                <a className="btn secondary-cta" href="/cv/Mohamed_Monge_Mobile_App_Developer_CV.pdf" download="Mohamed_Monge_Mobile_App_Developer_CV.pdf">
                   <span className="btn-icon"><DownloadIcon /></span>
                   Download CV
                 </a>
@@ -481,32 +481,40 @@ export default function App() {
         </div>
       )}
 
-      <footer>
-        <div className="cta footer-links">
+<footer>
+  <div className="footer-links">
+    <a
+      href={profile.instagram}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Instagram
+    </a>
 
-         
-          <a href={profile.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
-         <span>|</span>
+    <span>|</span>
 
-          <a
-  href={profile.linkedin}
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    display: 'inline-block',
-    color: '#00a8ff',
-    visibility: 'visible',
-    opacity: 1,
-  }}
->
-  LinkedIn
-</a>
-<span>|</span>
+    <a
+      href={profile.linkedin}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn
+    </a>
 
-          <a href={profile.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
-        </div>
-        <p>© {new Date().getFullYear()} {profile.name}</p>
-      </footer>
+    <span>|</span>
+
+    <a
+      href={profile.facebook}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Facebook
+    </a>
+  </div>
+
+  <p>© {new Date().getFullYear()} {profile.name}</p>
+</footer>
+
     </>
   )
 }
