@@ -485,7 +485,19 @@ export default function App() {
         <div className="cta footer-links">
 
           <a href={profile.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a
+  href={profile.linkedin}
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: 'inline-block',
+    color: '#00a8ff',
+    visibility: 'visible',
+    opacity: 1,
+  }}
+>
+  LinkedIn
+</a>
           <a href={profile.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
         <p>© {new Date().getFullYear()} {profile.name}</p>
