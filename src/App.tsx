@@ -1,5 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { profile, skills, projects, education, projectExperience, learning, type Project } from './data'
+import { Analytics } from '@vercel/analytics/react'
 
 type Theme = 'dark' | 'light'
 
@@ -515,6 +516,7 @@ export default function App() {
   <p>© {new Date().getFullYear()} {profile.name}</p>
 </footer>
 
+      <Analytics />
     </>
   )
 }
