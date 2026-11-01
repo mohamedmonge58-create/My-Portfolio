@@ -205,18 +205,20 @@ function ProjectCard({ p, onZoom }: { p: Project; onZoom: (images: string[], ind
 function ProjectShowcase({ p, onZoom }: { p: Project; onZoom: (images: string[], index?: number) => void }) {
   const hasAdminScreens = Boolean(p.adminScreens?.length)
 
+  if (!hasAdminScreens) {
+    return <div className="project-showcase project-showcase--single"><ProjectCard p={p} onZoom={onZoom} /></div>
+  }
+
   return (
-    <div className="project-showcase">
+    <div className="project-showcase project-showcase--admin">
       <ProjectCard p={p} onZoom={onZoom} />
-      {hasAdminScreens && (
-        <aside className="card project-side-gallery reveal" aria-label={`${p.title} admin dashboard screenshots`}>
-          <span className="badge">Admin dashboard</span>
-          <Strip shots={p.adminScreens ?? []} alt={`${p.title} admin dashboard`} onZoom={onZoom} />
-          <button type="button" className="btn secondary" onClick={() => onZoom(p.adminScreens ?? [], 0)} aria-label={`View admin dashboard screens for ${p.title}`}>
-            View admin dashboard
-          </button>
-        </aside>
-      )}
+      <aside className="card project-side-gallery reveal" aria-label={`${p.title} admin dashboard screenshots`}>
+        <span className="badge">Admin dashboard</span>
+        <Strip shots={p.adminScreens ?? []} alt={`${p.title} admin dashboard`} onZoom={onZoom} />
+        <button type="button" className="btn secondary" onClick={() => onZoom(p.adminScreens ?? [], 0)} aria-label={`View admin dashboard screens for ${p.title}`}>
+          View admin dashboard
+        </button>
+      </aside>
     </div>
   )
 }
