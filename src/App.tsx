@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent } from 'react'
-import { profile, skills, projects, education, projectExperience, learning, type Project } from './data'
+import { profile, skills, projects, education, type Project } from './data'
 
 type Theme = 'dark' | 'light'
 
@@ -202,6 +202,25 @@ function ProjectCard({ p, onZoom }: { p: Project; onZoom: (images: string[], ind
   )
 }
 
+function ProjectShowcase({ p, onZoom }: { p: Project; onZoom: (images: string[], index?: number) => void }) {
+  const hasAdminScreens = Boolean(p.adminScreens?.length)
+
+  return (
+    <div className="project-showcase">
+      <ProjectCard p={p} onZoom={onZoom} />
+      {hasAdminScreens && (
+        <aside className="card project-side-gallery reveal" aria-label={`${p.title} admin dashboard screenshots`}>
+          <span className="badge">Admin dashboard</span>
+          <Strip shots={p.adminScreens ?? []} alt={`${p.title} admin dashboard`} onZoom={onZoom} />
+          <button type="button" className="btn secondary" onClick={() => onZoom(p.adminScreens ?? [], 0)} aria-label={`View admin dashboard screens for ${p.title}`}>
+            View admin dashboard
+          </button>
+        </aside>
+      )}
+    </div>
+  )
+}
+
 export default function App() {
   const [theme, setTheme] = useState<Theme>(initialTheme)
   const [menu, setMenu] = useState(false)
@@ -357,9 +376,20 @@ export default function App() {
 
         <section id="projects">
           <h2 className="title reveal">Featured projects</h2>
-          <div className="grid projects">
-            {projects.filter((p) => p.visible).map((p) => <ProjectCard key={p.title} p={p} onZoom={(images, index = 0) => setZoom({ images, index })} />)}
-          </div>
+          {(['Flutter Projects', 'Full-Stack Projects'] as const).map((category) => {
+            const categoryProjects = projects.filter((p) => p.visible && p.category === category)
+            if (categoryProjects.length === 0) return null
+            return (
+              <div key={category} className="project-category reveal">
+                <h3 className="project-category-title">{category}</h3>
+                <div className="grid projects">
+                  {categoryProjects.map((p) => (
+                    <ProjectShowcase key={p.title} p={p} onZoom={(images, index = 0) => setZoom({ images, index })} />
+                  ))}
+                </div>
+              </div>
+            )
+          })}
         </section>
 
         

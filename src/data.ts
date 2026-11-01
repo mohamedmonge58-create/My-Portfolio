@@ -33,6 +33,8 @@ export const skills: { group: string; items: string[] }[] = [
   { group: 'Development Tools', items: ['Git', 'GitHub', 'Android Studio', 'VS Code'] },
 ]
 
+export type ProjectCategory = 'Flutter Projects' | 'Full-Stack Projects'
+
 export type Project = {
   title: string
   summary: string
@@ -41,16 +43,12 @@ export type Project = {
   status?: string
   image?: string
   screens?: string[]
-  dashboardScreens?: string[]
+  adminScreens?: string[]
   github?: string
   live?: string
   visible: boolean
+  category?: ProjectCategory
 }
-
-export const projectCategories = [
-  { title: 'Flutter Projects', items: ['Islami', 'Evently', 'Movies App', 'Coffee App', 'News App'] },
-  { title: 'Full-Stack Projects', items: ['M3loma'] },
-]
 
 export const projects: Project[] = [
   {
@@ -66,6 +64,7 @@ export const projects: Project[] = [
     status: 'Preparing for Google Play release',
     screens: shots.islamii,
     github: 'https://github.com/mohamedmonge58-create/islamii_app',
+    category: 'Flutter Projects',
     visible: true,
   },
   {
@@ -79,6 +78,7 @@ export const projects: Project[] = [
     stack: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore', 'Provider', 'SharedPreferences'],
     screens: shots.evently,
     github: 'https://github.com/mohamedmonge58-create/Evently',
+    category: 'Flutter Projects',
     visible: true,
   },
   {
@@ -94,6 +94,7 @@ export const projects: Project[] = [
     stack: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore', 'Firebase Storage', 'Dio', 'BLoC', 'GoRouter', 'Google Sign-In'],
     screens: shots.moviesApp,
     github: 'https://github.com/mohamedmonge58-create/movies_app',
+    category: 'Flutter Projects',
     visible: true,
   },
   {
@@ -109,21 +110,7 @@ export const projects: Project[] = [
     stack: ['Flutter', 'Dart', 'Dio', 'BLoC', 'GoRouter', 'SharedPreferences', 'Cached Network Image'],
     screens: shots.coffeeApp,
     github: 'https://github.com/mohamedmonge58-create/coffee_shop',
-    visible: true,
-  },
-  {
-    title: 'M3loma',
-    summary: 'Flutter learning app with onboarding, course discovery, profile management, and study progress tracking.',
-    features: [
-      'Onboarding and Firebase authentication flows',
-      'Course discovery, search, topics, and detailed lesson previews',
-      'Enrolled courses, favorites, and session tracking for learning progress',
-      'Profile settings, notifications, certificates, and support screens',
-    ],
-    stack: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore', 'Firebase Storage', 'Dio', 'flutter_bloc', 'GoRouter', 'GetIt'],
-    status: 'In progress',
-    screens: shots.m3loma,
-    github: 'https://github.com/mohamedmonge58-create/M3loma-',
+    category: 'Flutter Projects',
     visible: true,
   },
   {
@@ -133,6 +120,24 @@ export const projects: Project[] = [
     stack: ['Flutter', 'Dart', 'REST APIs', 'Provider', 'SharedPreferences', 'url_launcher'],
     screens: shots.news,
     github: 'https://github.com/mohamedmonge58-create/News_App',
+    category: 'Flutter Projects',
+    visible: true,
+  },
+  {
+    title: 'M3loma',
+    summary: 'Full-stack educational platform with a Flutter mobile app, Node.js and TypeScript backend, Prisma/PostgreSQL data layer, and admin dashboard for course management.',
+    features: [
+      'Flutter mobile app for learning journeys, discovery, profiles, and course access',
+      'Node.js and TypeScript backend with REST API integration across app and admin dashboard',
+      'Prisma + PostgreSQL data model for courses, lessons, users, and platform settings',
+      'Admin dashboard for managing courses, categories, lessons, users, and platform configuration',
+    ],
+    stack: ['Flutter', 'Dart', 'Node.js', 'TypeScript', 'REST APIs', 'Prisma', 'PostgreSQL', 'React', 'Admin Dashboard'],
+    status: 'In progress',
+    screens: shots.m3loma,
+    adminScreens: shots.m3lomaBackend,
+    github: 'https://github.com/mohamedmonge58-create/M3loma-',
+    category: 'Full-Stack Projects',
     visible: true,
   },
 ]

@@ -128,6 +128,19 @@ const m3lomaScreens = [
   '/screens/m3loma/comp;eted.png',
 ].map(normalize)
 
+const m3lomaBackendScreens = [
+  '/screens/m3loma_backend/dashboard.png',
+  '/screens/m3loma_backend/courses.png',
+  '/screens/m3loma_backend/categories.png',
+  '/screens/m3loma_backend/create categories.png',
+  '/screens/m3loma_backend/create course.png',
+  '/screens/m3loma_backend/lessons.png',
+  '/screens/m3loma_backend/manage lessons.png',
+  '/screens/m3loma_backend/add lesson.png',
+  '/screens/m3loma_backend/users.png',
+  '/screens/m3loma_backend/settings.png',
+].map(normalize)
+
 export const shots: Record<string, string[]> = {
   islamii: [...islamiiScreens],
   islamiiApp: [...islamiiScreens],
@@ -139,6 +152,7 @@ export const shots: Record<string, string[]> = {
   coffeeApp: [...coffeeAppScreens],
   coffee: [...coffeeAppScreens],
   m3loma: [...m3lomaScreens],
+  m3lomaBackend: [...m3lomaBackendScreens],
   contactApp: [],
   tawseela: [],
   coffeeShop: [...coffeeAppScreens],
